@@ -1,5 +1,11 @@
-original = input("Introduce la palabra que quieres cambiar: ")
-nueva = input("Introduce la nueva palabra: ")
+import sys
+
+argumentos = sys.argv
+
+nombreF = argumentos[1]
+original = argumentos[2]
+nueva = argumentos[3]
+
 
 nombreF = "fichero.txt"
 
@@ -12,4 +18,5 @@ texto_nuevo = texto_original.replace(original, nueva)
 f = open(nombreF, "w")
 f.write(texto_nuevo)
 f.close()
+
 
